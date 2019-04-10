@@ -1,5 +1,5 @@
 Bootstrap: docker
-From: ubuntu:18.04
+From: ubuntu:bionic-20190307
 
 %labels
 MAINTAINER darachm
@@ -7,15 +7,23 @@ DATE 190410
 
 %help
 
-    This is a base for general purpose stuff.
+    This is a base for running things, general stuff.
+    It includes nextflow
     
 %post
 
     apt-get -y update
     apt-get -y upgrade
-    apt-get -y install gzip git wget g++ gcc-4.8 curl 
+# to install nextflow
+    apt-get -y install default-jdk graphviz curl 
+# general stuff
+    apt-get -y install gzip git wget g++ gcc-4.8
+# for additional repos
     apt-get -y install gnupg2 software-properties-common 
-    apt-get -y install oracle-java8-installer graphviz
+
+    cd / 
+    curl -s https://get.nextflow.io | bash
+    chmod a+rx /nextflow
 
 %test
 
