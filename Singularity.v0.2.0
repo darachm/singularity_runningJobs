@@ -16,6 +16,8 @@ DATE 190410
     apt-get -y upgrade
 # to install nextflow
     apt-get -y install default-jdk graphviz curl 
+# to install singularity
+    apt-get -y install singularity-container
 # general stuff
     apt-get -y install gzip git wget g++ gcc-4.8 gawk
 # for additional repos
