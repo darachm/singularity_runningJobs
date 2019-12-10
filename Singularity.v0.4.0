@@ -3,7 +3,7 @@ From: ubuntu:bionic-20190307
 
 %labels
 MAINTAINER darachm
-DATE 190410
+DATE 191209
 
 %help
 
@@ -24,6 +24,8 @@ DATE 190410
     apt-get -y install gnupg2 software-properties-common 
 # perl ! Some times you just need a one-liner
     apt-get -y install perl
+# sqlite
+    apt-get -y install sqlite3
 
     cd / 
     curl -s https://get.nextflow.io | bash
